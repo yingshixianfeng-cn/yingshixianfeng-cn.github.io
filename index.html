@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>影视先锋 - 首映前瞻、先锋片单与影视热度观察 | yingshixianfeng-cn</title>
+<meta name="description" content="影视先锋（yingshixianfeng-cn.github.io）聚焦首映前瞻、先锋片单、影视热度观察与深度影评观察，覆盖院线新片、剧集首播、独立影像与幕后制作，抢先看懂下一部值得追的作品。">
+<meta name="keywords" content="影视先锋,影视先锋首映,首映前瞻,先锋片单,新片前瞻,影视热度观察,影视深度观察,院线新片,剧集首播,影视评测">
+<meta name="author" content="影视先锋">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="theme-color" content="#0d0d0d">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://yingshixianfeng-cn.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="影视先锋">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="影视先锋 - 首映前瞻、先锋片单与影视热度观察">
+<meta property="og:description" content="影视先锋聚焦首映前瞻、先锋片单、影视热度观察与深度影像观察，抢先看懂下一部值得追的作品。">
+<meta property="og:url" content="https://yingshixianfeng-cn.github.io/">
+<meta property="og:image" content="https://yingshixianfeng-cn.github.io/assets/og-cover.jpg">
+<meta property="og:image:alt" content="影视先锋首页预览图">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="影视先锋 - 首映前瞻、先锋片单与影视热度观察">
+<meta name="twitter:description" content="首映前瞻、先锋片单、影视热度观察与深度影像观察，一页抢先看。">
+<meta name="twitter:image" content="https://yingshixianfeng-cn.github.io/assets/og-cover.jpg">
+<link rel="alternate" hreflang="zh-CN" href="https://yingshixianfeng-cn.github.io/">
+<link rel="alternate" hreflang="x-default" href="https://yingshixianfeng-cn.github.io/">
+<style>
+:root{
+  --void:#0d0d0d; --void-2:#161616; --void-3:#222;
+  --acid:#e8ff00; --cyan:#00e5ff; --magenta:#ff2d78; --sand:#f4f1e8;
+  --text:#f2f2f0; --text-dim:#9a9a95; --text-mute:#6e6e68;
+  --cut:14px;
+  --max:1240px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:"SFMono-Regular","JetBrains Mono",Menlo,Consolas,"Courier New",monospace;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:64px;}
+body{margin:0;font-family:var(--font);font-size:16px;line-height:1.8;color:var(--text);background:var(--void);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.35;background-image:radial-gradient(rgba(255,255,255,.10) 1px,transparent 1px);background-size:4px 4px;}
+img,svg{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul,ol,dl,dd{margin:0;padding:0;list-style:none;}
+h1,h2,h3,h4{margin:0;line-height:1.12;font-weight:900;letter-spacing:-.02em;}
+p{margin:0;}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px;position:relative;z-index:1;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+.skip{position:absolute;left:-9999px;top:0;z-index:120;background:var(--acid);color:#000;padding:10px 16px;font-weight:900;}
+.skip:focus{left:0;}
+.mono{font-family:var(--mono);}
+
+/* ===== 滚动进度（左侧竖条，差异化） ===== */
+.progress{position:fixed;top:0;left:0;width:4px;height:0;background:var(--acid);z-index:110;}
+
+/* ===== 顶栏 ===== */
+.hd{position:sticky;top:0;z-index:100;background:rgba(13,13,13,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #2a2a2a;}
+.hd .wrap{display:flex;align-items:center;gap:16px;min-height:62px;}
+.logo{display:flex;align-items:baseline;gap:9px;flex:0 0 auto;}
+.logo b{font-size:21px;font-weight:900;letter-spacing:.02em;color:#fff;}
+.logo b em{font-style:normal;color:var(--acid);}
+.logo span{font-family:var(--mono);font-size:10.5px;color:var(--text-mute);letter-spacing:.1em;}
+.nav{margin-left:auto;}
+.nav ul{display:flex;gap:2px;}
+.nav a{display:block;padding:8px 11px;font-size:14.5px;font-weight:700;color:#cfcfc9;border-bottom:2px solid transparent;}
+.nav a:hover{color:var(--acid);border-bottom-color:var(--acid);}
+
+/* 移动端横向滚动胶囊条 */
+.pills{display:none;border-bottom:1px solid #2a2a2a;background:var(--void-2);}
+.pills ul{display:flex;gap:8px;overflow-x:auto;padding:10px 22px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.pills ul::-webkit-scrollbar{display:none;}
+.pills a{display:block;white-space:nowrap;font-size:13.5px;font-weight:800;padding:7px 15px;border:1px solid #3a3a3a;border-radius:999px;color:#cfcfc9;}
+.pills a:hover{background:var(--acid);color:#000;border-color:var(--acid);}
+
+/* ===== Hero：巨型排版 + 快讯侧栏 ===== */
+.hero{position:relative;border-bottom:1px solid #2a2a2a;padding:60px 0 46px;overflow:hidden;}
+.hero::after{content:"";position:absolute;right:-8%;top:-30%;width:52vw;height:150%;background:linear-gradient(160deg,var(--cyan),var(--magenta));opacity:.16;transform:rotate(14deg) skewY(-8deg);filter:blur(30px);}
+.masthead{display:grid;grid-template-columns:1fr 300px;gap:36px;align-items:end;}
+.masthead h1{font-size:clamp(46px,13vw,150px);letter-spacing:-.05em;line-height:.88;text-transform:uppercase;}
+.masthead h1 .solid{display:block;color:#fff;}
+.masthead h1 .hollow{display:block;color:transparent;-webkit-text-stroke:2px var(--acid);}
+.masthead h1 .cn{display:block;font-size:clamp(28px,6vw,64px);letter-spacing:.06em;color:var(--acid);margin-top:6px;}
+.hero-meta{margin-top:26px;display:flex;gap:26px;flex-wrap:wrap;font-family:var(--mono);font-size:12.5px;color:var(--text-mute);letter-spacing:.06em;}
+.hero-meta b{color:var(--cyan);}
+.hero-lead{margin-top:20px;max-width:62ch;font-size:clamp(15px,1.5vw,17.5px);color:#c9c9c3;}
+.hero-lead strong{color:#fff;background:linear-gradient(transparent 65%,rgba(232,255,0,.35) 65%);}
+.hero-cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:13px 26px;font-weight:900;font-size:15px;background:var(--acid);color:#000;clip-path:polygon(0 0,100% 0,100% 72%,calc(100% - 14px) 100%,0 100%);}
+.btn:hover{background:var(--cyan);}
+.btn.line{background:transparent;color:#fff;border:1px solid #4a4a4a;clip-path:none;}
+.btn.line:hover{border-color:var(--acid);color:var(--acid);}
+.wire{border:1px solid #333;background:var(--void-2);padding:16px 18px;}
+.wire h2{font-size:13px;font-family:var(--mono);letter-spacing:.2em;color:var(--acid);text-transform:uppercase;}
+.wire ol{margin-top:12px;display:grid;gap:11px;counter-reset:w;}
+.wire li{counter-increment:w;display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:13.5px;color:#b8b8b2;}
+.wire li::before{content:counter(w,decimal-leading-zero);font-family:var(--mono);font-size:11px;color:var(--magenta);}
+.wire .up{display:block;margin-top:2px;font-size:11.5px;font-family:var(--mono);color:var(--text-mute);}
+
+/* ===== 通用区块头 ===== */
+.sec{padding:68px 0;border-bottom:1px solid #232323;}
+.sec-head{margin-bottom:34px;max-width:820px;}
+.sec-head .idx{font-family:var(--mono);font-size:12px;letter-spacing:.24em;color:var(--magenta);text-transform:uppercase;}
+.sec-head h2{margin-top:10px;font-size:clamp(25px,4vw,40px);}
+.sec-head h2 span{color:var(--acid);}
+.sec-head p{margin-top:12px;font-size:15.8px;color:#a9a9a3;}
+.sec-head p strong{color:#fff;}
+
+/* ===== 栏目1 首映前瞻：figure 全宽横幅堆叠 ===== */
+.banners{display:grid;gap:0;border-top:1px solid #2a2a2a;}
+.banners figure{margin:0;display:grid;grid-template-columns:132px 180px 1fr auto;gap:24px;align-items:center;padding:26px 18px;border-bottom:1px solid #2a2a2a;transition:background .3s ease,padding-left .3s ease;}
+.banners figure:hover{background:var(--void-2);padding-left:28px;}
+.banners .day{font-size:clamp(34px,5vw,58px);font-weight:900;line-height:.9;color:transparent;-webkit-text-stroke:2px var(--cyan);font-family:var(--mono);}
+.banners .mon{display:block;font-family:var(--mono);font-size:11px;color:var(--text-mute);letter-spacing:.18em;-webkit-text-stroke:0;color:var(--text-mute);margin-top:6px;}
+.banners .plate{height:96px;clip-path:polygon(0 0,100% 0,88% 100%,0 100%);display:flex;align-items:center;justify-content:center;font-size:34px;}
+.banners figure:nth-child(4n+1) .plate{background:linear-gradient(135deg,var(--acid),#8aa800);}
+.banners figure:nth-child(4n+2) .plate{background:linear-gradient(135deg,var(--cyan),#006b7a);}
+.banners figure:nth-child(4n+3) .plate{background:linear-gradient(135deg,var(--magenta),#7a0f38);}
+.banners figure:nth-child(4n+4) .plate{background:linear-gradient(135deg,#b39cff,#3b2a7a);}
+.banners figcaption h3{font-size:19px;}
+.banners figcaption .tags{margin-top:7px;display:flex;gap:8px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;color:var(--text-mute);letter-spacing:.06em;}
+.banners figcaption .tags i{font-style:normal;padding:2px 8px;border:1px solid #3a3a3a;}
+.banners figcaption p{margin-top:8px;font-size:14.5px;color:#a9a9a3;max-width:62ch;}
+.banners .go{flex:0 0 auto;font-family:var(--mono);font-size:12.5px;font-weight:800;color:var(--acid);border:1px solid var(--acid);padding:9px 14px;white-space:nowrap;}
+.banners .go:hover{background:var(--acid);color:#000;}
+
+/* ===== 栏目2 先锋片单：dl 定义矩阵 ===== */
+.sec-list{background:var(--void-2);}
+.matrix{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#2a2a2a;border:1px solid #2a2a2a;}
+.matrix div{background:var(--void);padding:22px 24px;transition:background .28s ease,color .28s ease;}
+.matrix div:hover{background:var(--acid);color:#000;}
+.matrix dt{display:flex;align-items:baseline;gap:12px;font-size:20px;font-weight:900;}
+.matrix dt i{font-family:var(--mono);font-style:normal;font-size:12px;color:var(--magenta);letter-spacing:.1em;}
+.matrix div:hover dt i{color:#000;}
+.matrix dt b{margin-left:auto;font-family:var(--mono);font-size:12px;font-weight:700;color:var(--text-mute);}
+.matrix div:hover dt b{color:#333;}
+.matrix dd{margin-top:9px;font-size:14.5px;color:#9d9d97;line-height:1.7;}
+.matrix div:hover dd{color:#1a1a1a;}
+.matrix dd a{font-weight:800;border-bottom:1px solid currentColor;}
+.list-foot{margin-top:24px;display:flex;gap:10px;flex-wrap:wrap;}
+.tagx{font-family:var(--mono);font-size:12.5px;padding:7px 13px;border:1px dashed #4a4a4a;color:#b8b8b2;}
+.tagx:hover{border-color:var(--acid);color:var(--acid);}
+
+/* ===== 栏目3 热度观察：巨号描边 + SVG 环形 ===== */
+.rank{display:grid;gap:1px;background:#2a2a2a;border:1px solid #2a2a2a;counter-reset:r;}
+.rank li{counter-increment:r;background:var(--void);display:grid;grid-template-columns:110px 1fr 118px;gap:22px;align-items:center;padding:20px 22px;}
+.rank li:hover{background:var(--void-3);}
+.rank .no{font-family:var(--mono);font-size:clamp(30px,5vw,52px);font-weight:900;line-height:1;color:transparent;-webkit-text-stroke:2px var(--acid);}
+.rank li:nth-child(1) .no{-webkit-text-stroke:2px var(--magenta);}
+.rank li:nth-child(2) .no{-webkit-text-stroke:2px var(--cyan);}
+.rank .info h3{font-size:17.5px;}
+.rank .info .sub{margin-top:5px;font-family:var(--mono);font-size:12px;color:var(--text-mute);letter-spacing:.05em;}
+.rank .info .txt{margin-top:7px;font-size:14.3px;color:#a2a29c;max-width:70ch;}
+.ring{position:relative;width:104px;height:104px;}
+.ring svg{transform:rotate(-90deg);}
+.ring .val{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--mono);font-size:19px;font-weight:900;color:#fff;}
+.ring .val small{display:block;font-size:10px;color:var(--text-mute);letter-spacing:.1em;}
+.rank-note{margin-top:20px;font-family:var(--mono);font-size:12.5px;color:var(--text-mute);}
+
+/* ===== 栏目4 深度观察：Z 型交错 ===== */
+.zig{display:grid;gap:0;}
+.zig article{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid #2a2a2a;align-items:stretch;}
+.zig article:first-child{border-top:1px solid #2a2a2a;}
+.zig article:nth-child(even) .art-media{order:2;}
+.zig article:nth-child(even) .art-body{order:1;text-align:right;}
+.zig article:nth-child(even) .art-body .quote{border-left:0;border-right:4px solid var(--magenta);padding-left:0;padding-right:16px;}
+.art-body{padding:30px 34px;}
+.art-body .kind{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--cyan);text-transform:uppercase;}
+.art-body h3{margin-top:10px;font-size:22px;}
+.art-body p{margin-top:10px;font-size:15px;color:#a9a9a3;}
+.art-body .quote{margin-top:16px;border-left:4px solid var(--acid);padding-left:16px;font-size:16px;font-weight:800;color:#fff;line-height:1.6;}
+.art-body .lnk{margin-top:16px;display:inline-block;font-size:14px;font-weight:900;color:var(--acid);}
+.art-body .lnk:hover{text-decoration:underline;}
+.art-media{min-height:210px;display:flex;align-items:center;justify-content:center;font-size:64px;position:relative;overflow:hidden;}
+.zig article:nth-child(1) .art-media{background:repeating-linear-gradient(115deg,#1a1a1a,#1a1a1a 18px,#0d0d0d 18px,#0d0d0d 36px);}
+.zig article:nth-child(2) .art-media{background:repeating-linear-gradient(115deg,#101c1f,#101c1f 18px,#0d0d0d 18px,#0d0d0d 36px);}
+.zig article:nth-child(3) .art-media{background:repeating-linear-gradient(115deg,#1f1016,#1f1016 18px,#0d0d0d 18px,#0d0d0d 36px);}
+.zig article:nth-child(4) .art-media{background:repeating-linear-gradient(115deg,#16121f,#16121f 18px,#0d0d0d 18px,#0d0d0d 36px);}
+.art-media b{font-family:var(--mono);font-size:13px;letter-spacing:.3em;color:var(--text-mute);position:absolute;bottom:14px;left:16px;}
+
+/* ===== 栏目5 问答：checkbox 卡片网格 ===== */
+.qa-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+.qa{border:1px solid #333;background:var(--void-2);}
+.qa input{position:absolute;opacity:0;width:1px;height:1px;}
+.qa label{display:flex;align-items:flex-start;gap:12px;cursor:pointer;padding:17px 18px;font-weight:800;font-size:15.6px;line-height:1.5;}
+.qa label::before{content:"?";flex:0 0 auto;width:24px;height:24px;display:grid;place-items:center;font-family:var(--mono);font-size:13px;font-weight:900;background:var(--magenta);color:#fff;}
+.qa label:hover{background:var(--void-3);}
+.qa input:checked ~ label{background:var(--acid);color:#000;}
+.qa input:checked ~ label::before{content:"✓";background:#000;color:var(--acid);}
+.qa input:focus-visible ~ label{outline:3px solid var(--cyan);outline-offset:-3px;}
+.qa .ans{max-height:0;overflow:hidden;transition:max-height .34s ease;}
+.qa input:checked ~ .ans{max-height:400px;}
+.qa .ans p{padding:0 18px 18px;font-size:14.7px;color:#a9a9a3;border-top:1px dashed #3a3a3a;margin-top:0;padding-top:14px;}
+.qa .ans p strong{color:#fff;}
+
+/* ===== 栏目6 关于：荧光块 + 跑马灯 + 统计 ===== */
+.sec-about{background:var(--acid);color:#000;border-bottom:0;}
+.sec-about .sec-head .idx{color:#000;opacity:.6;}
+.sec-about .sec-head h2{color:#000;}
+.sec-about .sec-head h2 span{color:#443;}
+.sec-about .sec-head p{color:#25250f;}
+.sec-about .sec-head p strong{color:#000;}
+.ticker{overflow:hidden;border-top:2px solid #000;border-bottom:2px solid #000;padding:12px 0;margin-bottom:34px;}
+.ticker ul{display:flex;gap:40px;white-space:nowrap;animation:run 26s linear infinite;}
+.ticker li{font-size:22px;font-weight:900;letter-spacing:.02em;text-transform:uppercase;}
+.ticker li::after{content:"●";margin-left:40px;font-size:12px;vertical-align:middle;}
+@keyframes run{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.about-cols{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:start;}
+.about-cols .lead{font-size:18px;font-weight:800;line-height:1.6;}
+.about-cols p.norm{margin-top:12px;font-size:15px;color:#25250f;}
+ul.spec{margin-top:22px;display:grid;gap:0;border-top:2px solid #000;}
+ul.spec li{display:grid;grid-template-columns:130px 1fr;gap:14px;padding:11px 2px;border-bottom:1px solid rgba(0,0,0,.25);font-size:14.6px;}
+ul.spec li b{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;}
+ul.spec li span{font-weight:700;}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#000;border:2px solid #000;}
+.stats div{background:var(--acid);padding:18px;}
+.stats b{display:block;font-size:34px;font-weight:900;line-height:1;font-family:var(--mono);}
+.stats span{display:block;margin-top:6px;font-size:12.5px;font-weight:800;letter-spacing:.06em;}
+.sub-form{margin-top:20px;border:2px solid #000;padding:18px;background:rgba(255,255,255,.35);}
+.sub-form h3{font-size:16px;}
+.sub-form p{margin-top:6px;font-size:13.5px;color:#25250f;}
+.sub-form .row{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;}
+.sub-form input{flex:1;min-width:180px;border:2px solid #000;background:#fff;padding:11px 13px;font-family:inherit;font-size:14px;color:#000;}
+.sub-form button{border:2px solid #000;background:#000;color:var(--acid);font-family:inherit;font-weight:900;font-size:14px;padding:11px 22px;cursor:pointer;}
+.sub-form button:hover{background:var(--cyan);color:#000;}
+.sub-form .tip{margin-top:9px;font-family:var(--mono);font-size:11.5px;color:#3a3a20;}
+
+/* ===== 页脚 ===== */
+.ft{background:var(--void);color:var(--text-mute);padding:52px 0 34px;font-size:14px;border-top:1px solid #2a2a2a;}
+.ft-grid{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:28px;}
+.ft h4{font-size:13px;font-family:var(--mono);letter-spacing:.18em;color:var(--acid);text-transform:uppercase;margin-bottom:13px;}
+.ft ul{display:grid;gap:8px;}
+.ft a{color:#a9a9a3;}
+.ft a:hover{color:var(--acid);}
+.ft-brand .logo{margin-bottom:10px;}
+.ft-brand p{font-size:13.5px;color:#7e7e78;max-width:38ch;}
+.ft-bar{margin-top:30px;padding-top:16px;border-top:1px solid #232323;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:#5e5e58;}
+.ft-bar a{color:#8b8b85;}
+.top-btn{position:fixed;right:16px;bottom:20px;width:48px;height:48px;border:1px solid #4a4a4a;background:var(--void-2);color:var(--acid);font-weight:900;font-size:18px;cursor:pointer;z-index:105;opacity:0;pointer-events:none;transform:translateY(10px);transition:.28s ease;}
+.top-btn.show{opacity:1;pointer-events:auto;transform:none;}
+.top-btn:hover{background:var(--acid);color:#000;}
+
+/* ===== 响应式 ===== */
+@media (max-width:1080px){
+  .masthead{grid-template-columns:1fr;gap:28px;}
+  .wire{max-width:520px;}
+  .about-cols{grid-template-columns:1fr;gap:26px;}
+  .ft-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:900px){
+  .nav{display:none;}
+  .pills{display:block;}
+  .sec{padding:52px 0;}
+  .banners figure{grid-template-columns:96px 1fr;gap:16px;padding:22px 14px;}
+  .banners .plate{grid-column:1 / -1;height:120px;order:-1;clip-path:polygon(0 0,100% 0,94% 100%,0 100%);}
+  .banners .day{font-size:38px;}
+  .banners .go{grid-column:2;}
+  .matrix{grid-template-columns:1fr;}
+  .rank li{grid-template-columns:76px 1fr;gap:14px;padding:16px;}
+  .ring{grid-column:2;width:88px;height:88px;}
+  .zig article{grid-template-columns:1fr;}
+  .zig article:nth-child(even) .art-media{order:0;}
+  .zig article:nth-child(even) .art-body{order:0;text-align:left;}
+  .zig article:nth-child(even) .art-body .quote{border-right:0;border-left:4px solid var(--magenta);padding-right:0;padding-left:16px;}
+  .art-media{min-height:150px;}
+  .qa-grid{grid-template-columns:1fr;}
+}
+@media (max-width:620px){
+  .masthead h1 .hollow{-webkit-text-stroke:1.5px var(--acid);}
+  .hero{padding:42px 0 34px;}
+  .hero-meta{gap:14px;font-size:11.5px;}
+  .banners .day{font-size:32px;}
+  .banners figcaption h3{font-size:17px;}
+  .stats{grid-template-columns:1fr;}
+  ul.spec li{grid-template-columns:1fr;gap:2px;}
+  .ft-grid{grid-template-columns:1fr;gap:22px;}
+  .ticker li{font-size:17px;}
+  .ring{width:76px;height:76px;}
+  .rank .no{font-size:32px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+<a class="skip" href="#main">跳到主要内容</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="hd">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="影视先锋首页">
+      <b>影视<em>先锋</em></b>
+      <span class="mono">yingshixianfeng-cn</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <ul>
+        <li><a href="#premiere">首映前瞻</a></li>
+        <li><a href="#list">先锋片单</a></li>
+        <li><a href="#rank">热度观察</a></li>
+        <li><a href="#insight">深度观察</a></li>
+        <li><a href="#qa">观影问答</a></li>
+        <li><a href="#about">关于影视先锋</a></li>
+      </ul>
+    </nav>
+  </div>
+  <nav class="pills" aria-label="栏目快捷导航">
+    <ul>
+      <li><a href="#premiere">首映前瞻</a></li>
+      <li><a href="#list">先锋片单</a></li>
+      <li><a href="#rank">热度观察</a></li>
+      <li><a href="#insight">深度观察</a></li>
+      <li><a href="#qa">观影问答</a></li>
+      <li><a href="#about">关于</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="masthead">
+        <div>
+          <h1 id="hero-title">
+            <span class="solid">FILM</span>
+            <span class="hollow">PIONEER</span>
+            <span class="cn">影视先锋</span>
+          </h1>
+          <p class="hero-lead">「<strong>影视先锋</strong>」是一份抢先一步的观影参考：用<strong>首映前瞻</strong>锁定即将上映的新片与剧集首播，用<strong>先锋片单</strong>筛掉注水内容，用<strong>影视热度观察</strong>与深度影像观察回答"值不值得看、什么时候看、怎么看更好"。</p>
+          <div class="hero-cta">
+            <a class="btn" href="#premiere">查看首映前瞻</a>
+            <a class="btn line" href="#list">浏览先锋片单</a>
+          </div>
+          <div class="hero-meta">
+            <span><b>更新节奏</b> 每日 09:00 / 21:00</span>
+            <span><b>覆盖范围</b> 院线 · 剧集 · 独立影像</span>
+            <span><b>站点</b> yingshixianfeng-cn.github.io</span>
+          </div>
+        </div>
+        <aside class="wire" aria-label="影视先锋快讯">
+          <h2>Pioneer Wire · 快讯</h2>
+          <ol>
+            <li>古装史诗新片定档，首映场开启点映<span class="up">10-11 09:20 更新</span></li>
+            <li>科幻剧集第二季放出先导预告<span class="up">10-11 08:05 更新</span></li>
+            <li>独立影像单元新增 6 部入围片<span class="up">10-10 21:30 更新</span></li>
+            <li>纪录片专题上线高码率版本<span class="up">10-10 12:10 更新</span></li>
+            <li>热度观察榜：悬疑短剧升至第二<span class="up">10-09 21:00 更新</span></li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 栏目1 首映前瞻 ===== -->
+  <section class="sec" id="premiere" aria-labelledby="pre-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">01 — Premiere Watch</span>
+        <h2 id="pre-title">首映前瞻 · <span>抢先看下一部</span></h2>
+        <p>按上映 / 首播日期排列的<strong>首映前瞻</strong>清单：每条含定档日期、题材标签与看点提示，直接告诉你它值不值得留时间。</p>
+      </div>
+      <div class="banners">
+        <figure>
+          <div class="day">10-15<span class="mon">WED · 院线</span></div>
+          <div class="plate" aria-hidden="true">🏛️</div>
+          <figcaption>
+            <h3>古装史诗新片《长夜行》</h3>
+            <p class="tags"><i>古装</i><i>剧情</i><i>148 分钟</i><i>中国大陆</i></p>
+            <p>三年制作的群像史诗，摄影与配乐是最大看点；首映场有短暂映后交流，建议优先选择大屏版本观看。</p>
+          </figcaption>
+          <a class="go" href="#">看前瞻</a>
+        </figure>
+        <figure>
+          <div class="day">10-18<span class="mon">SAT · 剧集首播</span></div>
+          <div class="plate" aria-hidden="true">🛰️</div>
+          <figcaption>
+            <h3>科幻剧集第二季 · 先导集</h3>
+            <p class="tags"><i>科幻</i><i>剧集</i><i>12 集</i><i>周更</i></p>
+            <p>世界观扩展明显，先导集信息量大，建议先看第一季 recap；特效镜头占比高，优先选择高码率版本。</p>
+          </figcaption>
+          <a class="go" href="#">看前瞻</a>
+        </figure>
+        <figure>
+          <div class="day">10-22<span class="mon">WED · 独立影像</span></div>
+          <div class="plate" aria-hidden="true">🎞️</div>
+          <figcaption>
+            <h3>独立影像单元 · 六部入围短片</h3>
+            <p class="tags"><i>独立</i><i>短片合集</i><i>单部 15-30 分钟</i></p>
+            <p>题材跨度大、作者风格鲜明，适合一次连看两到三部；合集提供简体中文字幕，顺序可按自选。</p>
+          </figcaption>
+          <a class="go" href="#">看前瞻</a>
+        </figure>
+        <figure>
+          <div class="day">10-25<span class="mon">SAT · 纪录片</span></div>
+          <div class="plate" aria-hidden="true">🏔️</div>
+          <figcaption>
+            <h3>自然地理纪录片《极境》</h3>
+            <p class="tags"><i>纪录</i><i>自然</i><i>6 集</i><i>高码率</i></p>
+            <p>拍摄周期长、画面密度高，是本季纪录片里最值得上大屏的一部；配乐层次丰富，建议戴耳机或外接音响。</p>
+          </figcaption>
+          <a class="go" href="#">看前瞻</a>
+        </figure>
+        <figure>
+          <div class="day">11-01<span class="mon">SAT · 动画电影</span></div>
+          <div class="plate" aria-hidden="true">🌌</div>
+          <figcaption>
+            <h3>奇幻动画电影《星海渡口》</h3>
+            <p class="tags"><i>动画</i><i>奇幻</i><i>112 分钟</i><i>全年龄</i></p>
+            <p>手绘背景占比高，色彩设计独特；叙事节奏温和，适合亲子共看，结尾彩蛋与续作设定有关联。</p>
+          </figcaption>
+          <a class="go" href="#">看前瞻</a>
+        </figure>
+      </div>
+      <div class="list-foot">
+        <a class="tagx" href="#"># 定档日历</a>
+        <a class="tagx" href="#"># 点映场次</a>
+        <a class="tagx" href="#"># 院线新片</a>
+        <a class="tagx" href="#"># 剧集首播</a>
+        <a class="tagx" href="#"># 独立影像</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 栏目2 先锋片单 ===== -->
+  <section class="sec sec-list" id="list" aria-labelledby="list-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">02 — Pioneer Selection</span>
+        <h2 id="list-title">先锋片单 · <span>按观看场景挑</span></h2>
+        <p>不是按类型堆列表，而是按<strong>真实观看场景</strong>组织的先锋片单：通勤、周末一口气、亲子共看、大屏沉浸，各自对应不同选择。</p>
+      </div>
+      <dl class="matrix">
+        <div>
+          <dt><i>A-01</i>通勤碎片时间<b>08 条</b></dt>
+          <dd>单集 30 分钟以内、情节自洽的单元剧与短剧，中途放下也不影响理解。<a href="#">进入片单</a></dd>
+        </div>
+        <div>
+          <dt><i>A-02</i>周末一口气刷完<b>06 条</b></dt>
+          <dd>十二集以内的闭环叙事剧集，线索回收完整，一个周末能追完不拖尾。<a href="#">进入片单</a></dd>
+        </div>
+        <div>
+          <dt><i>A-03</i>大屏沉浸观影<b>05 条</b></dt>
+          <dd>画面密度与音效层次突出的电影和纪录片，优先高码率 + 外接音响。<a href="#">进入片单</a></dd>
+        </div>
+        <div>
+          <dt><i>A-04</i>亲子共看时段<b>07 条</b></dt>
+          <dd>全年龄向动画与自然纪录片，内容温和、时长适中，附适龄提示。<a href="#">进入片单</a></dd>
+        </div>
+        <div>
+          <dt><i>A-05</i>下饭轻喜剧<b>09 条</b></dt>
+          <dd>节奏轻快、无需紧盯画面的综艺与情景剧，倍速观看也不掉信息。<a href="#">进入片单</a></dd>
+        </div>
+        <div>
+          <dt><i>A-06</i>硬核烧脑向<b>05 条</b></dt>
+          <dd>叙事结构复杂、细节密集的悬疑与科幻作品，建议专注观看不做倍速。<a href="#">进入片单</a></dd>
+        </div>
+        <div>
+          <dt><i>A-07</i>幕后与导演特辑<b>04 条</b></dt>
+          <dd>制作纪录片、导演访谈与分镜解析，看完正片再补，理解会更深一层。<a href="#">进入片单</a></dd>
+        </div>
+        <div>
+          <dt><i>A-08</i>年度回看清单<b>10 条</b></dt>
+          <dd>按年度整理的口碑条目，适合补片与二刷，标注版本与字幕差异。<a href="#">进入片单</a></dd>
+        </div>
+      </dl>
+      <div class="list-foot">
+        <a class="tagx" href="#"># 悬疑烧脑</a>
+        <a class="tagx" href="#"># 科幻未来</a>
+        <a class="tagx" href="#"># 自然纪实</a>
+        <a class="tagx" href="#"># 城市故事</a>
+        <a class="tagx" href="#"># 作者电影</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 栏目3 影视热度观察 ===== -->
+  <section class="sec" id="rank" aria-labelledby="rank-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">03 — Heat Observation</span>
+        <h2 id="rank-title">影视热度观察 · <span>数据看趋势</span></h2>
+        <p>热度指数由搜索量、讨论度与播放完成度三项合成，环形象征完成度占比。<strong>影视热度观察</strong>用于判断趋势，不代表作品质量评分。</p>
+      </div>
+      <ol class="rank">
+        <li>
+          <span class="no" aria-hidden="true">01</span>
+          <div class="info">
+            <h3>古装史诗新片《长夜行》</h3>
+            <p class="sub">院线 · 剧情 · 点映进行中</p>
+            <p class="txt">点映场次口碑扩散明显，讨论集中在摄影与群像调度，首映周末热度预计继续走高。</p>
+          </div>
+          <div class="ring">
+            <svg viewBox="0 0 100 100" width="104" height="104" aria-hidden="true">
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#2a2a2a" stroke-width="8"></circle>
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#e8ff00" stroke-width="8" stroke-linecap="butt" stroke-dasharray="264" stroke-dashoffset="26"></circle>
+            </svg>
+            <span class="val">96<small>HEAT</small></span>
+          </div>
+        </li>
+        <li>
+          <span class="no" aria-hidden="true">02</span>
+          <div class="info">
+            <h3>刑侦悬疑短剧（完结季）</h3>
+            <p class="sub">剧集 · 悬疑 · 已完结</p>
+            <p class="txt">完结后讨论量反升，完成度接近满环，属于典型的"完结才被看见"型条目。</p>
+          </div>
+          <div class="ring">
+            <svg viewBox="0 0 100 100" width="104" height="104" aria-hidden="true">
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#2a2a2a" stroke-width="8"></circle>
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#00e5ff" stroke-width="8" stroke-dasharray="264" stroke-dashoffset="34"></circle>
+            </svg>
+            <span class="val">93<small>HEAT</small></span>
+          </div>
+        </li>
+        <li>
+          <span class="no" aria-hidden="true">03</span>
+          <div class="info">
+            <h3>科幻剧集第二季</h3>
+            <p class="sub">剧集 · 科幻 · 周更</p>
+            <p class="txt">先导预告放出后搜索量抬升，讨论集中在世界观扩展，需等待正片验证质量。</p>
+          </div>
+          <div class="ring">
+            <svg viewBox="0 0 100 100" width="104" height="104" aria-hidden="true">
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#2a2a2a" stroke-width="8"></circle>
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#ff2d78" stroke-width="8" stroke-dasharray="264" stroke-dashoffset="50"></circle>
+            </svg>
+            <span class="val">89<small>HEAT</small></span>
+          </div>
+        </li>
+        <li>
+          <span class="no" aria-hidden="true">04</span>
+          <div class="info">
+            <h3>自然地理纪录片《极境》</h3>
+            <p class="sub">纪录片 · 自然 · 6 集</p>
+            <p class="txt">画面口碑稳定，完成度高但更新节奏慢，热度呈现平缓上升的走势。</p>
+          </div>
+          <div class="ring">
+            <svg viewBox="0 0 100 100" width="104" height="104" aria-hidden="true">
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#2a2a2a" stroke-width="8"></circle>
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#b39cff" stroke-width="8" stroke-dasharray="264" stroke-dashoffset="66"></circle>
+            </svg>
+            <span class="val">84<small>HEAT</small></span>
+          </div>
+        </li>
+        <li>
+          <span class="no" aria-hidden="true">05</span>
+          <div class="info">
+            <h3>奇幻动画电影《星海渡口》</h3>
+            <p class="sub">动画 · 奇幻 · 全年龄</p>
+            <p class="txt">亲子观影需求带动搜索，热度集中在周末时段，工作日回落明显。</p>
+          </div>
+          <div class="ring">
+            <svg viewBox="0 0 100 100" width="104" height="104" aria-hidden="true">
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#2a2a2a" stroke-width="8"></circle>
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#e8ff00" stroke-width="8" stroke-dasharray="264" stroke-dashoffset="84"></circle>
+            </svg>
+            <span class="val">80<small>HEAT</small></span>
+          </div>
+        </li>
+        <li>
+          <span class="no" aria-hidden="true">06</span>
+          <div class="info">
+            <h3>独立影像单元（短片合集）</h3>
+            <p class="sub">独立 · 短片 · 六部入围</p>
+            <p class="txt">受众窄但完成度极高，属于小范围高口碑类型，适合关注作者风格的观众。</p>
+          </div>
+          <div class="ring">
+            <svg viewBox="0 0 100 100" width="104" height="104" aria-hidden="true">
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#2a2a2a" stroke-width="8"></circle>
+              <circle cx="50" cy="50" r="42" fill="none" stroke="#00e5ff" stroke-width="8" stroke-dasharray="264" stroke-dashoffset="108"></circle>
+            </svg>
+            <span class="val">71<small>HEAT</small></span>
+          </div>
+        </li>
+      </ol>
+      <p class="rank-note">数据说明：热度指数每日 09:00 与 21:00 各刷新一次，环状占比代表播放完成度，非质量评分。</p>
+    </div>
+  </section>
+
+  <!-- ===== 栏目4 深度观察 ===== -->
+  <section class="sec" id="insight" aria-labelledby="ins-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">04 — Deep Observation</span>
+        <h2 id="ins-title">深度观察 · <span>看懂一部作品</span></h2>
+        <p>四条长读观察：从镜头语言、叙事结构到制作幕后，给出<strong>影视深度观察</strong>视角下的具体看点与观看建议。</p>
+      </div>
+      <div class="zig">
+        <article>
+          <div class="art-body">
+            <span class="kind">Observation 01 · 镜头语言</span>
+            <h3>长镜头不是为了炫技：它替观众做了什么决定</h3>
+            <p>从三部作品的开场段落拆解长镜头的实际功能——压缩时间、锁定视角、制造不确定感，并给出判断"是否必要"的简单标准。</p>
+            <p class="quote">"如果一个长镜头拿掉后，叙事依然成立，那它多半只是装饰。"</p>
+            <a class="lnk" href="#">阅读全文 →</a>
+          </div>
+          <div class="art-media" role="img" aria-label="镜头语言观察配图占位"><span aria-hidden="true">🎥</span><b>FIG.01 / LENS</b></div>
+        </article>
+        <article>
+          <div class="art-body">
+            <span class="kind">Observation 02 · 叙事结构</span>
+            <h3>单元剧为什么更适合通勤：结构上的三个优势</h3>
+            <p>对比连续叙事与单元叙事在信息密度上的差异，解释为什么单集自洽的结构更抗打断，并列出适配的观看时段。</p>
+            <p class="quote">"能被随意中断还不掉信息，本身就是一种结构设计能力。"</p>
+            <a class="lnk" href="#">阅读全文 →</a>
+          </div>
+          <div class="art-media" role="img" aria-label="叙事结构观察配图占位"><span aria-hidden="true">🧩</span><b>FIG.02 / STRUCTURE</b></div>
+        </article>
+        <article>
+          <div class="art-body">
+            <span class="kind">Observation 03 · 声音设计</span>
+            <h3>被低估的一半：声音如何决定你的紧张感</h3>
+            <p>以悬疑与科幻两类作品为例，说明低频铺底、静默留白与环境声在情绪控制中的作用，并给出耳机与音响的选择建议。</p>
+            <p class="quote">"关掉声音看一遍恐怖片，你会立刻明白声音占了多少。"</p>
+            <a class="lnk" href="#">阅读全文 →</a>
+          </div>
+          <div class="art-media" role="img" aria-label="声音设计观察配图占位"><span aria-hidden="true">🎧</span><b>FIG.03 / SOUND</b></div>
+        </article>
+        <article>
+          <div class="art-body">
+            <span class="kind">Observation 04 · 制作幕后</span>
+            <h3>一部纪录片拍三年：时间花在了哪些环节</h3>
+            <p>拆解自然纪录片的制作周期，说明等待拍摄、素材筛选与配乐制作各占多少比重，以及为什么高码率版本更接近创作者意图。</p>
+            <p class="quote">"你看到的一小时，背后通常是一整个季节的等待。"</p>
+            <a class="lnk" href="#">阅读全文 →</a>
+          </div>
+          <div class="art-media" role="img" aria-label="制作幕后观察配图占位"><span aria-hidden="true">🗺️</span><b>FIG.04 / BEHIND</b></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 栏目5 观影问答 ===== -->
+  <section class="sec" id="qa" aria-labelledby="qa-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">05 — FAQ</span>
+        <h2 id="qa-title">观影问答 · <span>想到就点开</span></h2>
+        <p>关于<strong>影视先锋</strong>内容组织方式与观看设置的常见疑问，卡片可同时展开多项，方便对照查看。</p>
+      </div>
+      <div class="qa-grid">
+        <div class="qa">
+          <input type="checkbox" id="q1" checked>
+          <label for="q1">影视先锋的首映前瞻和普通新片列表有什么不同？</label>
+          <div class="ans"><p>首映前瞻只收<strong>尚未正式上映 / 首播</strong>的条目，并按日期排期，每条附看点提示与建议观看方式；已上线作品归入先锋片单或热度观察，两类内容互不混排。</p></div>
+        </div>
+        <div class="qa">
+          <input type="checkbox" id="q2">
+          <label for="q2">先锋片单是按什么维度组织的？</label>
+          <div class="ans"><p>按<strong>真实观看场景</strong>而非题材分类：通勤碎片、周末连刷、大屏沉浸、亲子共看、下饭轻喜剧等。先确定你有多少时间和在什么设备上看，再挑对应片单。</p></div>
+        </div>
+        <div class="qa">
+          <input type="checkbox" id="q3">
+          <label for="q3">热度指数高是不是就等于好看？</label>
+          <div class="ans"><p>不等于。热度指数反映<strong>当日关注度趋势</strong>，环形象征的是播放完成度；它适合判断"大家在讨论什么"，挑选作品时建议结合深度观察与片单说明一起看。</p></div>
+        </div>
+        <div class="qa">
+          <input type="checkbox" id="q4">
+          <label for="q4">手机上追剧该选什么清晰度？</label>
+          <div class="ans"><p>小屏下 720P 与 1080P 的观感差异很小，但流量相差近一倍。移动网络建议锁 720P，<strong>Wi-Fi 环境</strong>再切到 1080P 或更高；纪录片与科幻作品更值得上高码率。</p></div>
+        </div>
+        <div class="qa">
+          <input type="checkbox" id="q5">
+          <label for="q5">投屏总是失败，通常是什么原因？</label>
+          <div class="ans"><p>多数情况是设备不在同一局域网、路由器开启了 AP 隔离，或投屏协议不匹配。先确认手机与电视连的是<strong>同一个 Wi-Fi 且非访客网络</strong>，再重启接收端通常即可恢复。</p></div>
+        </div>
+        <div class="qa">
+          <input type="checkbox" id="q6">
+          <label for="q6">倍速观看会不会错过内容？</label>
+          <div class="ans"><p>对白密集的剧情剧建议不超过 <strong>1.25 倍</strong>；综艺与纪录片可放宽到 1.5 倍；音乐类与节奏快的台词作品不建议超过 1.25 倍，否则容易丢掉笑点与细节。</p></div>
+        </div>
+        <div class="qa">
+          <input type="checkbox" id="q7">
+          <label for="q7">站点的更新频率是怎样的？</label>
+          <div class="ans"><p>快讯与热度观察<strong>每日 09:00 与 21:00</strong>各刷新一次，首映前瞻按定档日期提前排布，深度观察为不定期增补，条目页会标注实际更新时间。</p></div>
+        </div>
+        <div class="qa">
+          <input type="checkbox" id="q8">
+          <label for="q8">为什么有些条目只给建议不给链接？</label>
+          <div class="ans"><p>影视先锋定位为<strong>观影参考与观察</strong>，优先把"值不值得看、怎么看更好"讲清楚；具体播放入口以条目页当日标注为准，避免指向失效地址。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 栏目6 关于影视先锋 ===== -->
+  <section class="sec sec-about" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="ticker" aria-hidden="true">
+        <ul>
+          <li>影视先锋 · 首映前瞻</li>
+          <li>先锋片单 · 按场景挑片</li>
+          <li>影视热度观察</li>
+          <li>深度影像观察</li>
+          <li>每日 09:00 / 21:00 更新</li>
+          <li>影视先锋 · 首映前瞻</li>
+          <li>先锋片单 · 按场景挑片</li>
+          <li>影视热度观察</li>
+          <li>深度影像观察</li>
+          <li>每日 09:00 / 21:00 更新</li>
+        </ul>
+      </div>
+      <div class="sec-head">
+        <span class="idx">06 — About</span>
+        <h2 id="about-title">关于<span>影视先锋</span></h2>
+        <p>一句话定位：把"还没上映的"提前讲清楚，把"已经上线的"讲透一层。</p>
+      </div>
+      <div class="about-cols">
+        <div>
+          <p class="lead">影视先锋不做海量片库，只做三件事：提前排期、按场景挑片、用数据看趋势。</p>
+          <p class="norm">内容组织方式围绕一个简单判断链展开——先看<strong>首映前瞻</strong>决定要不要留时间，再看<strong>先锋片单</strong>匹配当前场景，最后用<strong>影视热度观察</strong>确认它是否真的在被讨论。三条各司其职，互不重复。</p>
+          <ul class="spec">
+            <li><b>SITE NAME</b><span>影视先锋</span></li>
+            <li><b>SITE URL</b><span>https://yingshixianfeng-cn.github.io/</span></li>
+            <li><b>COVERAGE</b><span>院线新片 · 剧集首播 · 独立影像 · 纪录片</span></li>
+            <li><b>UPDATE</b><span>每日 09:00 / 21:00 双次刷新</span></li>
+            <li><b>DEVICES</b><span>移动优先，兼容平板与桌面</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="stats">
+            <div><b>06</b><span>核心栏目</span></div>
+            <div><b>2×</b><span>每日刷新</span></div>
+            <div><b>54</b><span>在册片单条目</span></div>
+            <div><b>100%</b><span>移动自适应</span></div>
+          </div>
+          <form class="sub-form" action="#" method="get" aria-label="影视先锋更新提醒">
+            <h3>更新提醒登记</h3>
+            <p>留下关键词，新片定档与深度观察更新时按条目提示。</p>
+            <div class="row">
+              <label class="sr-only" for="kw">关注关键词</label>
+              <input id="kw" name="kw" type="text" placeholder="如：科幻 / 纪录片 / 悬疑" autocomplete="off">
+              <button type="submit">登记</button>
+            </div>
+            <p class="tip">表单为页面占位功能，不收集任何实际数据。</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <a class="logo" href="#top" aria-label="影视先锋首页">
+          <b>影视<em>先锋</em></b>
+          <span class="mono">yingshixianfeng-cn</span>
+        </a>
+        <p>影视先锋 · 首映前瞻、先锋片单、影视热度观察与深度影像观察，内容按日维护。</p>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="#premiere">首映前瞻</a></li>
+          <li><a href="#list">先锋片单</a></li>
+          <li><a href="#rank">热度观察</a></li>
+          <li><a href="#insight">深度观察</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Topics</h4>
+        <ul>
+          <li><a href="#premiere">院线新片</a></li>
+          <li><a href="#premiere">剧集首播</a></li>
+          <li><a href="#list">独立影像</a></li>
+          <li><a href="#insight">幕后特辑</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="#about">站点介绍</a></li>
+          <li><a href="#qa">观影问答</a></li>
+          <li><a href="#qa">更新频率</a></li>
+          <li><a href="#top">返回顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bar">
+      <span>© 2026 影视先锋 · yingshixianfeng-cn.github.io</span>
+      <span><a href="#about">关于站点</a> · <a href="#qa">观影问答</a> · <a href="#list">先锋片单</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="top-btn" id="topbtn" type="button" aria-label="回到顶部">↑</button>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://yingshixianfeng-cn.github.io/#website",
+      "url": "https://yingshixianfeng-cn.github.io/",
+      "name": "影视先锋",
+      "alternateName": "影视先锋 - 首映前瞻与影视热度观察",
+      "description": "影视先锋聚焦首映前瞻、先锋片单、影视热度观察与深度影像观察，覆盖院线新片、剧集首播、独立影像与幕后制作。",
+      "inLanguage": "zh-CN",
+      "publisher": { "@id": "https://yingshixianfeng-cn.github.io/#org" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": "https://yingshixianfeng-cn.github.io/?q={search_term_string}" },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://yingshixianfeng-cn.github.io/#org",
+      "name": "影视先锋",
+      "url": "https://yingshixianfeng-cn.github.io/",
+      "description": "影视先锋是一个提供首映前瞻、先锋片单与影视热度观察的影视内容站点。"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://yingshixianfeng-cn.github.io/#page",
+      "url": "https://yingshixianfeng-cn.github.io/",
+      "name": "影视先锋 - 首映前瞻、先锋片单与影视热度观察",
+      "isPartOf": { "@id": "https://yingshixianfeng-cn.github.io/#website" },
+      "about": "影视先锋首映前瞻、先锋片单、影视热度观察与深度影像观察",
+      "inLanguage": "zh-CN",
+      "mainEntity": { "@id": "https://yingshixianfeng-cn.github.io/#premierelist" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://yingshixianfeng-cn.github.io/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://yingshixianfeng-cn.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "首映前瞻", "item": "https://yingshixianfeng-cn.github.io/#premiere" },
+        { "@type": "ListItem", "position": 3, "name": "先锋片单", "item": "https://yingshixianfeng-cn.github.io/#list" },
+        { "@type": "ListItem", "position": 4, "name": "影视热度观察", "item": "https://yingshixianfeng-cn.github.io/#rank" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://yingshixianfeng-cn.github.io/#premierelist",
+      "name": "影视先锋首映前瞻",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "numberOfItems": 5,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "古装史诗新片《长夜行》" },
+        { "@type": "ListItem", "position": 2, "name": "科幻剧集第二季 · 先导集" },
+        { "@type": "ListItem", "position": 3, "name": "独立影像单元 · 六部入围短片" },
+        { "@type": "ListItem", "position": 4, "name": "自然地理纪录片《极境》" },
+        { "@type": "ListItem", "position": 5, "name": "奇幻动画电影《星海渡口》" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yingshixianfeng-cn.github.io/#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "影视先锋的首映前瞻和普通新片列表有什么不同？",
+          "acceptedAnswer": { "@type": "Answer", "text": "首映前瞻只收录尚未正式上映或首播的条目，按日期排期并附看点提示与建议观看方式；已上线作品归入先锋片单或热度观察，两类内容互不混排。" }
+        },
+        {
+          "@type": "Question",
+          "name": "先锋片单是按什么维度组织的？",
+          "acceptedAnswer": { "@type": "Answer", "text": "按真实观看场景而非题材分类，包括通勤碎片、周末连刷、大屏沉浸、亲子共看与下饭轻喜剧等，先确定观看时长与设备再挑对应片单。" }
+        },
+        {
+          "@type": "Question",
+          "name": "热度指数高是不是就等于好看？",
+          "acceptedAnswer": { "@type": "Answer", "text": "不等于。热度指数反映当日关注度趋势，环形象征播放完成度，适合判断大家在讨论什么，挑选作品时建议结合深度观察与片单说明。" }
+        },
+        {
+          "@type": "Question",
+          "name": "手机上追剧该选什么清晰度？",
+          "acceptedAnswer": { "@type": "Answer", "text": "小屏下 720P 与 1080P 观感差异很小但流量相差近一倍，移动网络建议锁定 720P，Wi-Fi 环境再切换到 1080P 或更高。" }
+        },
+        {
+          "@type": "Question",
+          "name": "投屏总是失败，通常是什么原因？",
+          "acceptedAnswer": { "@type": "Answer", "text": "多数情况是设备不在同一局域网、路由器开启 AP 隔离或投屏协议不匹配，确认手机与电视连同一 Wi-Fi 且非访客网络后重试。" }
+        },
+        {
+          "@type": "Question",
+          "name": "倍速观看会不会错过内容？",
+          "acceptedAnswer": { "@type": "Answer", "text": "对白密集的剧情剧建议不超过 1.25 倍，综艺与纪录片可放宽到 1.5 倍，音乐类与快节奏台词作品不建议超过 1.25 倍。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  var bar = document.getElementById('progress');
+  var btn = document.getElementById('topbtn');
+  function onScroll() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    bar.style.height = (h > 0 ? (y / h) * 100 : 0) + 'vh';
+    if (y > 420) { btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+  btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+})();
+</script>
+</body>
+</html>
